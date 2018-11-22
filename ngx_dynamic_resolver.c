@@ -540,8 +540,6 @@ ngx_dynamic_resolver_start_resolver(ngx_str_t *domain,
         {
             break;
         }
-
-        ctx = ctx->next;
     }
 
     if (d == NULL) { /* not found */
