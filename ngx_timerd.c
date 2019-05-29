@@ -227,6 +227,8 @@ ngx_timerd_state(ngx_http_request_t *r, unsigned detail)
         + sizeof("ngx_timerd nalloc node: \n") - 1 + NGX_OFF_T_LEN
         + sizeof("ngx_timerd nfree node: \n") - 1 + NGX_OFF_T_LEN;
 
+    len1 = 0;
+
     /* node for create pool */
     if (detail) {
         n = ngx_timerd_nalloc - ngx_timerd_nfree;

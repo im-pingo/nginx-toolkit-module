@@ -249,6 +249,8 @@ ngx_rbuf_state(ngx_http_request_t *r, unsigned detail)
         + sizeof("ngx_rbuf nalloc chain: \n") - 1 + NGX_OFF_T_LEN
         + sizeof("ngx_rbuf nfree chain: \n") - 1 + NGX_OFF_T_LEN;
 
+    len1 = 0;
+
     if (detail) {
         n = ngx_rbuf_nalloc_chain - ngx_rbuf_nfree_chain;
         /* "    file:line\n" */

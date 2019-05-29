@@ -148,6 +148,8 @@ ngx_poold_state(ngx_http_request_t *r, unsigned detail)
         + sizeof("ngx_poold nalloc node: \n") - 1 + NGX_OFF_T_LEN
         + sizeof("ngx_poold nfree node: \n") - 1 + NGX_OFF_T_LEN;
 
+    len1 = 0;
+
     /* node for create pool */
     if (detail) {
         n = ngx_poold_nalloc - ngx_poold_nfree;
